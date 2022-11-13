@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="enter_city_text">Введите город</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
