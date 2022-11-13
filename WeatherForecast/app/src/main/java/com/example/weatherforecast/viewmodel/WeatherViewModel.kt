@@ -5,12 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.weatherforecast.service.model.WeatherData
 import com.example.weatherforecast.service.repository.WeatherRepository
+import com.example.weatherforecast.utils.SingleLiveEvent
 import kotlinx.coroutines.launch
 import java.io.IOException
 
 class WeatherViewModel : ViewModel() {
     private var weatherRepository = WeatherRepository()
-    var responseCode = MutableLiveData<Int>()
+    var responseCode = SingleLiveEvent<Int>()
     var weatherLiveData =MutableLiveData<WeatherData>()
 
     fun getWeatherInfo(city: String){
